@@ -23,7 +23,7 @@ public class MatrixGraph extends AbstractGraph {
     public MatrixGraph(int numV, boolean directed) {
         super(numV, directed);
         edges = new double[numV][];
-        if (!directed) {
+        if (directed) {
             for (int i = 0; i != numV; ++i) {
                 edges[i] = new double[numV];
                 for (int j = 0; j != numV; ++j) {
