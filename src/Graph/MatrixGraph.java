@@ -104,7 +104,7 @@ public class MatrixGraph extends AbstractGraph {
      *  POSITIVE_INFINITY if no edge exists
      */
     private double getEdgeValue(int source, int dest) {
-        if (isDirected() | source <= dest) {
+        if (isDirected() | source >= dest) {
             return edges[source][dest];
         } else {
             return edges[dest][source];
